@@ -5,6 +5,9 @@
 > [!NOTE]
 > Luego de la clase si hay dudas o quieren hacer consultas el tiempo de 21:30 - 22:00 el profe esta disponible para consultas ya sea pro discord o por aca.
 
+> [!NOTE]
+> La nota conceptual del Bootcamp se toma tambien de las participacion en el kahoot. Si alumno nunca participa en el kahoot no puedo saber si sigue o no clase. No se evalua respuestas correctas solamente sino que participe.
+
 # Repaso
 
 * Arquitectura en capas
@@ -350,3 +353,46 @@ repositorio = RepositorioAlumnos()
 # Break
 Hata y 35
 ---
+
+# Actividad Complementaria
+
+* Completar este formulario
+  * https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=FPbD6dnIlUCa1IfSyafYxE4uGCthyi9EnQYg85vv3slUMDdYRzJNVUhKNFdFWjNQQVBQRkM5TE1PVy4u
+* Luego completar
+   * https://www.menti.com/?code=59424146\
+
+* Hasta 9:15
+* Si no llegaron con todas no pasa nada
+* Pero entreguen! Por Favor!
+
+<img width="359" height="182" alt="image" src="https://github.com/user-attachments/assets/b273f7e1-7f7d-409c-91f3-f19635637502" />
+
+
+> [!NOTE]
+> Buena la actividad pero para clase 10 preguntas son muchas y sino esta bueno como actividad coplementaria luego de la clase
+ 
+# Reglas de Negocio
+
+* La reglas de negocio son las que determinan que esta permitido, que no esta permitido, que calculos deben realizarse, que decisiones y aciones/procesoss deben ejecutarse que forman parte del negocio. Son las reglas que vienen del problema que estamos resolviendo (estan relacionadas mas con el modelo, el dominio) y no con la tecnologia que usamos o cuestiones tecnicas.
+ * Ejemplos
+   * Restricciones / Validaciones :
+      * Un pedido no puede tener canitidad negativa
+      * Alumno no puede tener más de 5 materias registradas en un semestre (Relación con otro modelo)
+    * Calculo : El iva se calcula por el 21% sobre el total
+    * Decision : Si el importe supera x monto el envio es gratuito
+    * Proceso: Cuando se confirma un pedido se le manda una notificacion al cliente
+    * Accion : Cuando una factura vence el cliente se marca como moroso
+  
+ * Las reclas de negocio si tienen que ver con un objeto individual o relacion entre un grupo de objetos concreto (Alunmo y sus materias) se suelen programar deseablemebte en la capa de modelo
+ 
+ * Peeeeeeeero peeeeeero peeeero. Hay reglas de negocio que necesitan una vision general de todos los objetos del sistema y coordinar la comunicacion entre capas del sistema. Por ejemplo no puede haber dos alymnos con el mismo legajo (necesita conocer todos los alumnos del sistema). En ese caso se crea una capa nueva (no la tenemos en nuestro ejemplo todavia) que es la capa de servicios
+
+# Los que  no llegaron o lo hiceron muy rapdio :   
+  * https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=FPbD6dnIlUCa1IfSyafYxE4uGCthyi9EnQYg85vv3slUMDdYRzJNVUhKNFdFWjNQQVBQRkM5TE1PVy4u
+
+
+# Proxima Clase
+
+* Introducir a nuestro ejemplo la capa de Servicios
+* Ademas tenemos la deuda cognitica de los metodos estaticos (teoria dela POO)
+  
