@@ -23,6 +23,12 @@
 
 ---
 
+# Novedades
+
+* Modelo para tomar decisiones
+ * JEV
+  * https://jev-ai.org/
+
 # Arquitectura de SW
 
 ## Capa de Servicios
