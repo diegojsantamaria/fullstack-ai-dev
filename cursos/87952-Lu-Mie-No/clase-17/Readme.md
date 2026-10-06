@@ -256,13 +256,16 @@ Después, en `api.py`, convertí ese caso en una respuesta HTTP `409 Conflict`, 
 * Quiero aplicando la receta y el ejemplo que vimos hagan un CRUD de una Persona que tiene DNI y nombre.
    * El documento no se puede repetir
    * El nombre comienza con mayucula y las otra otras con minuscula y no tiene mas de 30 caracteres
+* Solo hacer los gets y el POST
+* Probarlo con Thunder Client
 
- * Subir el TP en su github (El mismo que me pasaron la primer clasa)
+* Subir el TP en su github (El mismo que me pasaron la primer clasa)
 
- * Una vez subido completar la URL de github con el proyecto en el formulario quele pase el profe
+* Una vez subido completar la URL de github con el proyecto en el formulario quele pase el profe
 
- * 
+* Subir el TP aca:
+  * https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=FPbD6dnIlUCa1IfSyafYxE4uGCthyi9EnQYg85vv3slUOVlOSTNOUUJLRTIzQ081TFJHWTVaNDNZTS4u
   
-
 ---
 # Proxim Clase - Poo - Metodos y atrbutos estaticos
+# Vamos a hacerle un cliente a nuestro proyecto.
