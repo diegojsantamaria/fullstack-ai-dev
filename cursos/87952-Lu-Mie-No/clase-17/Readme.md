@@ -251,6 +251,18 @@ Después, en `api.py`, convertí ese caso en una respuesta HTTP `409 Conflict`, 
       * PUT para modificar
       * DELETE para borrar
 
+## Trabajo Practico (Obligatorio)
+
+* Quiero aplicando la receta y el ejemplo que vimos hagan un CRUD de una Persona que tiene DNI y nombre.
+   * El documento no se puede repetir
+   * El nombre comienza con mayucula y las otra otras con minuscula y no tiene mas de 30 caracteres
+
+ * Subir el TP en su github (El mismo que me pasaron la primer clasa)
+
+ * Una vez subido completar la URL de github con el proyecto en el formulario quele pase el profe
+
+ * 
+  
 
 ---
 # Proxim Clase - Poo - Metodos y atrbutos estaticos
