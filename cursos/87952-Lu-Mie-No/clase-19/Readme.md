@@ -32,6 +32,19 @@
 
 # Consumir Api Rest
 
+## Asincronico vs Sincronico
+
+* Segun la IA
+ * Lo sincronico responde inmediatamente, lo asincronico hay que esperar
+ * Una llamada sincronica devuelve el control al programa para ejecutar la proxima instruccion enseguida, una llaada asincronica puede bloquear el programa hasta que termine
+ * Llamadas Sincronicas
+  * print / console.log
+ * Llamadas Asincronicas
+   * Llamada a una API
+   * Consultar una base de datos
+   * Lleer un archivo
+   * Hacer un input
+
 ## Api para consumir
 
 * https://rickandmortyapi.com/api/character
@@ -54,8 +67,118 @@ personajes = respuesta.json()
 print(json.dumps(personajes, indent=4, ensure_ascii=False))
 ```
 
+> [!NOTE]
+> Aca no hay forma de distinguir si es una llamada sincronica o asincronica
+
+* Esta linea respuesta = requests.get(url) se tiene que ejecutar antez de devolverle el control al programa
+* Puede tardar varios MS dependiendo la velocidad de conexion
+
 ## Desde javascript
 
-# Base de Datos
+* Requisitos "NodeJS" instalado
+
+### Hola Mundo desde el Server 
+
+```
+node --version
+```
+
+* Sino lo instalan de : https://nodejs.org/es
+
+* Hola Mundo en javascript
+
+```javascript
+console.log("Hola, mundo!");
+```
+
+* Para ejecutarlo
+```
+>node hola-mundo.js
+Hola, mundo!
+```
+
+### Hola Mundo desde el cliente
+
+* Si lo quiero del lado del cliente
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hola, mundo!");
+    </script>
+</body>
+</html>
+```
+
+### Llamada a la api desde el server
+
+* Version 1 : Con await modo bloquante
+
+```
+let url = "https://rickandmortyapi.com/api/character"
+
+let respuesta = await fetch(url)
+
+let personajes = await respuesta.json()
+
+console.log(JSON.stringify(personajes, null, 4))
+```
+
+> [!NOTE]
+> Aca se ve claro con el await que  await fetch(url) es una llamada asincronica
 
 
+* Version 2 : Con llamadas asincronicas
+
+```
+let url = "https://rickandmortyapi.com/api/character"
+
+//La llamada a la API se hace de manera asíncrona, pero el bucle for se ejecuta inmediatamente
+fetch(url)
+    .then(respuesta => respuesta.json())
+    .then(personajes => {
+        console.log(JSON.stringify(personajes, null, 4))
+    })
+
+
+for (let i = 0; i < 500; i++) {
+    console.log("Esto funciona mientras se hace la llamda a la api")
+}
+```
+
+### Llamada a API desde el Browser
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        let url = "https://rickandmortyapi.com/api/character"
+
+        let respuesta = await fetch(url)
+
+        let personajes = await respuesta.json()
+
+        alert(JSON.stringify(personajes, null, 4))
+    </script>
+</body>
+</html>
+```
+
+
+---
+BREAKE
+HAsta y 30
+---
