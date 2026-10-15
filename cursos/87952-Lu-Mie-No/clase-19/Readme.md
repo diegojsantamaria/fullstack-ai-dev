@@ -182,3 +182,68 @@ for (let i = 0; i < 500; i++) {
 BREAKE
 HAsta y 30
 ---
+
+# JSon-Server
+
+* Es un paquete de nodejs que permite emular una api rest con un json
+* Sirve para emular un backend con todas las operaciones get, post, put, delete hasta tener la version final productiva
+* Permite programar la parte de la api rest del cliente
+
+* Instalarla
+
+```
+npm install -g json-server
+```
+
+> [!NOTE]
+> Esto se puede ejecutar en cualquier directorio. El -g instala el paquete localmente
+
+```
+json-server --version
+```
+
+* Vamos a crear este documento db.json
+
+```json
+{
+    "personas": [
+        {
+            "id": 1,
+            "nombre": "Juan"
+        },
+        {
+            "id": 2,
+            "nombre": "Maria"
+        },
+        {
+            "id": 3,
+            "nombre": "Pedro"
+        }
+    ]
+}
+```
+
+* Lo ejecutamos con:
+
+```
+>json-server --watch db.json
+```
+
+* Accedemos en el navegador
+
+```
+http://localhost:3000/personas
+```
+
+```
+http://localhost:3000/personas/1
+```
+
+* Lo probamos con Thunder Client desde vscode
+  * Probemos los get
+
+* Pruebo el POST
+  * POST http://localhost:3000/personas
+  * Completar el body con un nombre
+
+<img width="542" height="226" alt="image" src="https://github.com/user-attachments/assets/305a5570-f27d-4bb7-8d7d-5c8f4ee29251" />
