@@ -191,3 +191,58 @@ conn.close();
 # BREAK
 Hasta y 25?
 ---
+
+# Recursos Para Aprender SQL Jugando
+
+* SQLNoir
+  * https://www.sqlnoir.com/
+* SQL Murder Mystery
+  * https://mystery.knightlab.com/
+* SQL Island (No esta funcionando)
+  * https://sql-island.informatik.uni-kl.de/
+* Query Quest
+  * https://www.queryquest.org/
+* Codex (para aprender python y SQL)
+  * https://www.codedex.io/sql
+* DE Steam (3usd)
+ * https://store.steampowered.com/app/3950130/Database_Detective_Minor_Crimes_Division/
+
+> [!NOTE]
+> Probalos, jugar a alguno al menos un par de horas y contarme como les fue
+
+> [!NOTE]
+> Descrubri de casualidad esto https://postgres.new/
+
+# AiDev
+
+## Herramienta de SQL con IA
+
+* URL
+ * https://database.build/
+* Caracteristicas
+  * Es un LLM que ademas tiene corriendo una base de datos posgres con la que puedo interactuar mediante lenguaje natural
+  * Si bien podemos utilizar chatGPT para que genere consultas, esta herrramienta posee una base de datos creada por detras
+* Puntaje
+ * 10 / 10
+
+
+* Podemos ejecutar tanto consultas en lenguaje natural como en SQL
+  
+```
+Quiero una base de datos donde tena alumnos que se puedan inscribir en materias. Los nombres de las tablas en spanish.
+```
+
+```
+Creame datos de pruebas en todas las tablas
+```
+
+```
+Quiero la consulta para la lista de materias en las cuales no se inscribio ningun alumno
+```
+
+```
+SELECT m.id, m.nombre, m.descripcion
+FROM materias m
+LEFT JOIN inscripciones i ON m.id = i.materia_id
+WHERE i.materia_id IS NULL;
+```
